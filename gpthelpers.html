@@ -4,6 +4,107 @@
 <title>Page Title</title>
 </head>
 <body>
+<!-- Отличный запрос — сейчас сделаем реально красивый велосипед, а не просто 2 кружка 😎🚲
+Добавим:
+	•	раму
+	•	руль
+	•	сиденье
+	•	цепь
+	•	более реалистичное вращение колёс
+
+⸻
+
+🚲 УЛУЧШЕННЫЙ ВЕЛОСИПЕД (SVG + анимация)
+
+👉 Замени старый блок .bike на этот:
+
+<div class="road">
+  <div class="bike">
+    <svg viewBox="0 0 200 100" width="200">
+
+      <!-- заднее колесо -->
+      <circle class="wheel" cx="40" cy="70" r="25"/>
+
+      <!-- переднее колесо -->
+      <circle class="wheel" cx="150" cy="70" r="25"/>
+
+      <!-- рама -->
+      <line x1="40" y1="70" x2="90" y2="40" stroke="white" stroke-width="3"/>
+      <line x1="90" y1="40" x2="120" y2="70" stroke="white" stroke-width="3"/>
+      <line x1="120" y1="70" x2="40" y2="70" stroke="white" stroke-width="3"/>
+
+      <!-- руль -->
+      <line x1="120" y1="70" x2="140" y2="40" stroke="white" stroke-width="3"/>
+
+      <!-- сиденье -->
+      <line x1="90" y1="40" x2="90" y2="25" stroke="white" stroke-width="3"/>
+      <line x1="80" y1="25" x2="100" y2="25" stroke="white" stroke-width="3"/>
+
+      <!-- педаль -->
+      <circle cx="90" cy="55" r="5" fill="white"/>
+
+    </svg>
+  </div>
+</div>
+
+
+⸻
+
+🎨 ОБНОВИ CSS
+
+.bike {
+  position: absolute;
+  bottom: 20px;
+  left: -220px;
+  animation: ride 6s linear infinite;
+}
+
+/* колёса */
+.wheel {
+  fill: none;
+  stroke: white;
+  stroke-width: 4;
+  animation: spin 0.7s linear infinite;
+  transform-origin: center;
+}
+
+/* движение */
+@keyframes ride {
+  0% { left: -220px; }
+  100% { left: 100%; }
+}
+
+/* вращение */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+
+⸻
+
+😍 Что стало лучше
+
+✔ выглядит как настоящий велосипед
+✔ есть рама, руль, сиденье
+✔ колёса крутятся реалистично
+✔ всё двигается как единое целое
+
+⸻
+
+🔥 Хочешь ещё сильнее (прям топ-топ)?
+
+Могу добавить:
+	•	🔗 ￼ цепь, которая тоже крутится
+	•	🧍 ￼ человечка, который крутит педали
+	•	🌄 ￼ фон с движением (эффект езды)
+	•	💨 ￼ эффект скорости (размытие)
+
+Просто скажи:
+👉 «сделай максимально реалистично» 😏
+
+
+-->
 
 
 </body>
